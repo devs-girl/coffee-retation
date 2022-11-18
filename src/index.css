@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+  @apply container mx-auto text-[#5c5c68] px-[6%];
+}
+.fl {
+  @apply md:flex justify-between items-center;
+}
+.list-fl {
+  @apply md:flex justify-start items-center;
+}
+.fooList-fl {
+  @apply md:flex delay-200;
+}
+.section-title {
+  @apply text-5xl font-semibold  mb-12 px-10 text-black;
+}
+.title {
+  @apply text-3xl font-semibold  mb-10  text-black;
+}
+.tiny-title {
+  @apply text-xl text-black font-semibold mb-8 delay-200 cursor-pointer hover:text-[#E27900]   delay-200 cursor-pointer;
+}
+.pragraph {
+  @apply text-sm font-normal text-sm leading-8;
+}
+.footer-title {
+  @apply text-2xl text-black font-semibold mb-8 pb-4 border  border-b-[#dad1c2] hover:text-[#E27900]   delay-200;
+}
+.input-field {
+  @apply my-2 px-2 py-1 w-full font-medium bg-transparent border border-[1] border-[#dad1c2] focus:outline-none focus:ring focus:ring-1 focus:ring-[#e27900] focus:border-transparent;
+}
+.sub-btn {
+  @apply bg-black px-8 py-3 my-2 text-white text-sm font-semibold relative hover:bg-[#E27900];
 }
